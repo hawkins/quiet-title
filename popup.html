@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style/popup.css">
+        <link rel="stylesheet" type="text/css" href="style/angular-material.min.css">
+    </head>
+    <body ng-app="App" ng-controller="appCtrl">
+        <md-content style="background: none;">
+            <h2>Quiet Title</h2>
+        </md-content>
+        <md-content>
+            <md-radio-group ng-model="case" ng-change="save()">
+                <md-radio-button value="lower">lower case</md-radio-button>
+                <md-radio-button value="camel">camel Case</md-radio-button>
+                <md-radio-button value="start">Start case</md-radio-button>
+                <md-radio-button value="proper">Proper Case</md-radio-button>
+                <md-radio-button value="all">ALL CAPS</md-radio-button>
+            </md-radio-group>
+        </md-content>
+
+        <!-- Angular Material -->
+        <script src="js/angular/angular.min.js"></script>
+        <script src="js/angular/angular-animate.min.js"></script>
+        <script src="js/angular/angular-aria.min.js"></script>
+        <script src="js/angular/angular-messages.min.js"></script>
+        <script src="js/angular/angular-material.min.js"></script>
+        <!-- Custom Popup -->
+        <script src="js/popup.js"></script>
+    </body>
+</html>

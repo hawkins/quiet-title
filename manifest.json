@@ -1,17 +1,22 @@
 {
     "manifest_version": 2,
     "name": "Quiet Title",
-    "version": "0.1",
+    "version": "0.2",
     "author": "Josh Hawkins",
     "description": "Lowercases YouTube video titles",
     "permissions": [
         "https://www.youtube.com/*",
-        "http://www.youtube.com/*"
+        "http://www.youtube.com/*",
+        "storage"
     ],
+    "browser_action": {
+        "default_title": "Quiet Title",
+        "default_popup": "popup.html"
+    },
     "content_scripts": [
         {
             "matches": ["https://www.youtube.com/*", "http://www.youtube.com/*"],
-            "js": ["content.js"],
+            "js": ["js/content.js"],
             "run_at": "document_end"
         }
     ]

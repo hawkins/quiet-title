@@ -1,0 +1,22 @@
+html, body {
+    width: 200px;
+    height: 200px;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+}
+
+md-content {
+    border-radius: 15px;
+    width: 75%;
+    position: absolute;
+    left: 12.5%;
+    right: 12.5%;
+    margin-bottom: 15px;
+}
+
+md-radio-button {
+    margin: 10px;
+}
