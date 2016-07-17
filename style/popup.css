@@ -3,9 +3,13 @@ html, body {
     height: 200px;
 }
 
-h2 {
+h1, h2, h3, h4, h5, h6 {
     width: 100%;
     text-align: center;
+}
+
+h3, h4, h5 {
+    color: rgba(0,0,0,0.47);
 }
 
 md-content {
@@ -14,9 +18,14 @@ md-content {
     position: absolute;
     left: 12.5%;
     right: 12.5%;
-    margin-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 md-radio-button {
     margin: 10px;
+}
+
+.plain {
+    background: none;
 }

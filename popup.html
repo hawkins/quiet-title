@@ -1,20 +1,28 @@
-<html>
+<html ng-app="App">
     <head>
         <link rel="stylesheet" type="text/css" href="style/popup.css">
         <link rel="stylesheet" type="text/css" href="style/angular-material.min.css">
     </head>
-    <body ng-app="App" ng-controller="appCtrl">
-        <md-content style="background: none;">
+    <body ng-controller="appCtrl">
+        <md-content class="plain">
             <h2>Quiet Title</h2>
         </md-content>
+
         <md-content>
-            <md-radio-group ng-model="case" ng-change="save()">
+            <md-radio-group ng-model="case" ng-change="save(); refresh();">
                 <md-radio-button value="lower">lower case</md-radio-button>
-                <md-radio-button value="camel">camel Case</md-radio-button>
                 <md-radio-button value="start">Start case</md-radio-button>
-                <md-radio-button value="proper">Proper Case</md-radio-button>
+                <md-radio-button value="title">Title Case</md-radio-button>
+                <md-radio-button value="camel">camelCase</md-radio-button>
                 <md-radio-button value="all">ALL CAPS</md-radio-button>
             </md-radio-group>
+        </md-content>
+
+        <md-content class="plain">
+            <h4>
+                Find me on
+                <a href="https://github.com/hawkins/quiet-title" ng-click="visit()">GitHub</a>!
+            </h4>
         </md-content>
 
         <!-- Angular Material -->
