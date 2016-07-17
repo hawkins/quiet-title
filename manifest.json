@@ -3,7 +3,7 @@
     "name": "Quiet Title",
     "version": "0.2",
     "author": "Josh Hawkins",
-    "description": "Lowercases YouTube video titles",
+    "description": "Quiets YouTube video titles",
     "permissions": [
         "https://www.youtube.com/*",
         "http://www.youtube.com/*",
