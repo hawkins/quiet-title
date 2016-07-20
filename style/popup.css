@@ -4,8 +4,12 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    width: 100%;
     text-align: center;
+    display: inline-block;
+}
+
+h2.md-primary {
+    color: #FF5891;
 }
 
 h3, h4, h5 {
@@ -28,4 +32,5 @@ md-radio-button {
 
 .plain {
     background: none;
+    text-align: center;
 }
