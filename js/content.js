@@ -73,14 +73,15 @@ function applyTitleFormat() {
         }
         // Replace other titles (sidebar, etc)
         try {
-            var titles = document.querySelectorAll('span.title');
-            for (var i = 0; i < titles.length; i++) {
-                titles[i].innerHTML = getDesiredCase(titles[i].innerHTML);
-            }
-            titles = document.querySelectorAll('a[title]');
-            for (var i = 0; i < titles.length; i++) {
-                titles[i].innerHTML = getDesiredCase(titles[i].innerHTML);
-            }
+            var selectors = [ 'span.title'
+                            , 'a[title]'
+                            , 'a.ytp-title-link > span'
+                            ];
+            selectors.forEach(function (selector) {
+                document.querySelectorAll(selector).forEach(function (element) {
+                    element.innerHTML = getDesiredCase(element.innerHTML);
+                });
+            });
         } catch (ex) {
             console.error(ex);
         }
