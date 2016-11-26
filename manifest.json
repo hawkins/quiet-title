@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Quiet Title",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "author": "Josh Hawkins",
     "description": "Quiets YouTube video titles",
     "icons": {
