@@ -38,7 +38,7 @@ String.prototype.toTitleCase = function(){
 
 // Function to get desired case
 function getDesiredCase (str) {
-    if (!titleCase) return str;
+    if (!titleCase || titleCase === 'original') return str;
 
     if (titleCase === 'lower') return str.toLowerCase();
     if (titleCase === 'title') return str.toTitleCase();
@@ -62,21 +62,21 @@ function applyTitleFormat() {
         }
 
         // Now replace every title on page via css selectors
-        try {
-            var selectors = [ '.watch-title'
-                            , 'span.title'
-                            , 'a.content-link'
-                            , 'a.ytp-title-link > span'
-                            , '.yt-ui-ellipsis'
-                            ];
-            selectors.forEach(function (selector) {
+        var selectors = [ '.watch-title'
+                        , 'span.title'
+                        , 'a.content-link'
+                        , 'a.ytp-title-link > span'
+                        , '.yt-ui-ellipsis'
+                        ];
+        selectors.forEach(function (selector) {
+            try {
                 document.querySelectorAll(selector).forEach(function (element) {
                     element.innerHTML = getDesiredCase(element.innerHTML);
                 });
-            });
-        } catch (ex) {
-            console.error(ex);
-        }
+            } catch (ex) {
+                console.error(ex);
+            }
+        });
     });
 }
 
